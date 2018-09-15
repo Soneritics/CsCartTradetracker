@@ -7,4 +7,27 @@
     <priority>1000</priority>
     <status>active</status>
     <has_icon>Y</has_icon>
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="redirectdir">
+                        <name>Redirect dir</name>
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+                    <item id="domain">
+                        <name>Domain (w/o www)</name>
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+                    <item id="trackinggroupid">
+                        <name>Tracking Group ID</name>
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
 </addon>
