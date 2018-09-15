@@ -1,5 +1,5 @@
 {assign var="productCount" value=0}
-{foreach from=$order_info.products item=product name=productLoop}{
+{foreach from=$order_info.products item=product name=productLoop}
     {assign var="productCount" value=$productCount+$product.amount}
 {/foreach}
 
