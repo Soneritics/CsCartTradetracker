@@ -21,6 +21,16 @@
                         <type>input</type>
                         <default_value></default_value>
                     </item>
+                    <item id="cid">
+                        <name>Campaign ID</name>
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+                    <item id="pid">
+                        <name>Product ID</name>
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
                     <item id="trackinggroupid">
                         <name>Tracking Group ID</name>
                         <type>input</type>

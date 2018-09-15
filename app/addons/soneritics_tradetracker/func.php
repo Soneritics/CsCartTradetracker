@@ -56,7 +56,7 @@ function fn_soneritics_tradetracker_before_dispatch($controller, $mode, $action,
 function fn_soneritics_tradetracker_redirect()
 {
     // Set domain name on which the redirect-page runs, WITHOUT "www.".
-    $domainName = \Tygh\Registry::get('addons.soneritics_tradetracker.domain');;
+    $domainName = \Tygh\Registry::get('addons.soneritics_tradetracker.domain');
 
     // Set tracking group ID if provided by TradeTracker.
     $trackingGroupID = \Tygh\Registry::get('addons.soneritics_tradetracker.trackinggroupid');
