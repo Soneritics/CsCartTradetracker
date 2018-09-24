@@ -3,7 +3,7 @@
     {assign var="productCount" value=$productCount+$product.amount}
 {/foreach}
 
-<script type="text/javascript">
+<script type="text/javascript" data-no-defer>
     var ttConversionOptions = ttConversionOptions || [];
     ttConversionOptions.push({
         type: 'sales',
