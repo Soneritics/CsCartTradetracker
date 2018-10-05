@@ -3,6 +3,11 @@
     {assign var="productCount" value=$productCount+$product.amount}
 {/foreach}
 
+{assign var="totalProductPrice" value=$order_info.total}
+{foreach from=$order_info.taxes item=tax name=taxLoop}
+    {assign var="totalProductPrice" value=round($totalProductPrice-$tax.tax_subtotal, 2)}
+{/foreach}
+
 <script type="text/javascript" data-no-defer>
     var ttConversionOptions = ttConversionOptions || [];
     ttConversionOptions.push({
@@ -10,7 +15,7 @@
         campaignID: '{$tradetrackerCID}',
         productID: '{$tradetrackerPID}',
         transactionID: '{$order_info.order_id}',
-        transactionAmount: '{$order_info.total}',
+        transactionAmount: '{$totalProductPrice}',
         quantity: '{$productCount}',
         email: '{$order_info.email}',
         descrMerchant: '',
@@ -25,5 +30,5 @@
     })(ttConversionOptions);
 </script>
 <noscript>
-    <img src="//ts.tradetracker.net/?cid={$tradetrackerCID}&amp;pid={$tradetrackerPID}&amp;tid={$order_info.order_id}&amp;tam={$order_info.total}&amp;data=&amp;qty={$productCount}&amp;eml=&amp;descrMerchant=&amp;descrAffiliate=&amp;event=sales&amp;currency=EUR" alt="" />
+    <img src="//ts.tradetracker.net/?cid={$tradetrackerCID}&amp;pid={$tradetrackerPID}&amp;tid={$order_info.order_id}&amp;tam={$totalProductPrice}&amp;data=&amp;qty={$productCount}&amp;eml=&amp;descrMerchant=&amp;descrAffiliate=&amp;event=sales&amp;currency=EUR" alt="" />
 </noscript>
